@@ -2,12 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackageId>JsonValidatorExtensions.NetCore</PackageId>
+    <PackageVersion>0.1</PackageVersion>
+    <Authors>Wendell Sampaio</Authors>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/wendellantildes/JsonValidatorExtensions/master/JsonValidatorExtensions/LICENSE</PackageLicenseUrl>
+    <Owners>Wendell Sampaio</Owners>
+    <PackageProjectUrl>https://github.com/wendellantildes/JsonValidatorExtensions</PackageProjectUrl>
+    <Description>It's a tool for .NetCore that uses JsonValidator in order to validate every json request.</Description>
+    <PackageTags>json</PackageTags>
+    <Title>Json request Validator</Title>
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="JsonValidatorTool" Version="0.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
