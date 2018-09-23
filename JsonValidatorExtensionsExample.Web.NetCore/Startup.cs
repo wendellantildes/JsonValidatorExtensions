@@ -36,8 +36,8 @@ namespace JsonValidatorExtensionsExample.Web.NetCore
             }
             //app.UseJsonValidator();
 
-            app.UseJsonValidator(new InvalidJsonResponseOptions(StatusCodes.Status400BadRequest,
-            new { message = "This is json is forbiden"}));
+            app.UseJsonValidator(new InvalidJsonResponse(StatusCodes.Status400BadRequest,
+                new { message = "This json is forbidden"}));
             app.UseHttpsRedirection();
             app.UseMvc();
         }

@@ -14,6 +14,6 @@ app.UseJsonValidator();
 If you want to return a custom response, you can do:
 
 ```csharp
-app.UseJsonValidator(new InvalidJsonResponseOptions(StatusCodes.Status400BadRequest,
-            new { message = "This is json is forbiden"}));
+app.UseJsonValidator(new InvalidJsonResponse(StatusCodes.Status400BadRequest,
+            new { message = "This json is forbidden"}));
 ```

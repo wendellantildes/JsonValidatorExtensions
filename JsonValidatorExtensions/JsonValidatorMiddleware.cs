@@ -11,9 +11,9 @@ namespace JsonValidatorExtensions
     {
         private const string _jsonContentType = "application/json";
         private readonly RequestDelegate _next;
-        private InvalidJsonResponseOptions _options;
+        private InvalidJsonResponse _options;
 
-        public JsonValidatorMiddleware(RequestDelegate next, InvalidJsonResponseOptions options)
+        public JsonValidatorMiddleware(RequestDelegate next, InvalidJsonResponse options)
         {
             _next = next;
             _options = options;

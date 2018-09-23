@@ -10,7 +10,7 @@ namespace JsonValidatorExtensions
         private const string _defaultErrorMessage = "Invalid Json";
 
         public static IApplicationBuilder UseJsonValidator(
-            this IApplicationBuilder builder, InvalidJsonResponseOptions options)
+            this IApplicationBuilder builder, InvalidJsonResponse options)
         {
             return builder.UseMiddleware<JsonValidatorMiddleware>(options);
         }
@@ -20,7 +20,7 @@ namespace JsonValidatorExtensions
         {
             return builder
                 .UseMiddleware<JsonValidatorMiddleware>(
-                    new InvalidJsonResponseOptions(StatusCodes.Status400BadRequest,
+                    new InvalidJsonResponse(StatusCodes.Status400BadRequest,
                                                   new ErrorDTO{
                                                      Message = _defaultErrorMessage
                                                   }));
